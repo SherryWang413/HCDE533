@@ -12,12 +12,101 @@
     <body> 
 
         <div class="header">
-            <h1>Example Student's Assignment 2!</h1>
+            <h1>Assignment 2: Parametric Modelling with Grasshopper</h1>
+            
             <p>
-            <img src="red-panda.jpg" width=400></a>
+            By Sherry Wang
             </p>
             <p>
-            Here is all the documentation for assignment 2!
+            Here is the finished and assembled piece, including 12 large pentagons and 30 small connecting pieces:
+            </p>
+            <p>
+            <img src="placed.jpg" width=600></a>
+            </p>
+            <p>
+            I wanted to inherit my assignment 1's idea but did a little (turned out to be a LOT) improvements. Instead of using circles to build a dodecahedron, I decided to use pentagons. I got inspired from this:
+            </p>
+            <p>
+            <img src="A2_Matt reference.png" width=400></a>
+            </p>
+            <p>
+            Here's the link: <a href="http://fab.cba.mit.edu/classes/863.10/people/matt.blackshaw/week2.html"> Matt Blackshaw's Homework from MIT </a> <br/>              
+            To be clear, this person did not build a parametric model. As I did all the calculations for dodecahedrons and pentagons in the last assignment, I used all those insisting data and started building.
+            </p>
+            <p>
+            Before diving deep into the grasshopper definition and explanation, here's a screenshot of the final shapes:
+            </p>
+            <p>
+            <img src="A2_Final rhino.png" width=600></a>
+            </p>
+            <p>
+            I continued using the cardboard leftovers from assignment 1, which have slightly different thickness, ranging from 3.3mm to 3.9mm. Last time during assembling, the pieces were a little too tight, so for this project I decided to go with 3.2mm as the width of my gaps.
+            </p>
+
+            <p>
+            Here comes the Grasshopper talking. Keep in mind that the thickness of the cardboard CAN BE VARIED as I set it as a number slider and linked everything based on it.
+            </p>
+            <p>
+            I started by making the pentagon. Here's a complete screenshot of the definition:
+            </p>
+            <p>
+            <img src="A2_GH1.png" width=800></a>
+            </p>
+            <p>
+            Since we went over a circular example in class, I repeated a similar procedure for this part.<br/>
+            One thing different and difficult was that when creating a polygon in GH, it asked for a radius and I put in an integer. However, when I was moving the rectangular gap to a desired position, the radius was no longer helpful. I needed to calculate the height and the side length of the pentagon using sine, cosine, and tangent. And because of the shape, the angles were 54, 72, 108, etc.<br/>
+            This was the first time I realized this idea might be a mistake, but I soldiered through, naively.
+            </p>
+            <p>
+            Once the pentagon was finished, I baked it, saved it, and moved on to the connecting parts.<br/>
+            Let's take a look at the reference picture I found:
+            </p>
+            <p>
+            <img src="A2_Matt reference2.png" width=400></a>
+            </p>
+            <p>
+            Doesn't seem so complicated, I thought. I would just create two smaller pentagons, trim out the inner part, then draw two vertical lines and trim again. The gaps should be even easier, attach the midpoints together and we're good to go!<br/>
+            Boy did it slap me in my face hard. With Grasshopper, I can't draw vertical lines easily, I can't trim the curves using curves, I can't find all the midpoints I want, and for some reasons my Math bachelors degree can't help me get all the calculations right.<br/>
+            Take a look at how far I went and how hard I failed:
+            </p>
+            <p>
+            <img src="A2_Failed.png" width=800></a>
+            </p>
+            <p>
+            With all this effort, the second rectangle misses its edge by 0.x millimeters. It probably would look okay after being laser-cutted. But as a perfectionist, I started over.
+            </p>
+            <p>
+            This time, I realized that I needed to think outside the box.<br/>
+            Instead of drawing and trimming, I could calculate the coordinates of each points, create lines between them, and bam we have a trapezoid.<br/>
+            The same thing could happen with the rectangle. Once half of the piece is done, I can trim out the part and then mirror it around one side as an axis.<br/>
+            Before working with GH, I also wrote down all the equations and formulas on a piece of paper. Here's the second and successful version of the connecting piece:
+            </p>
+            <p>
+            <img src="A2_GH3.png" width=800></a>
+            </p>
+            <p>
+            This screenshot looks massive, but some were repetitive work and looked more organized in details. <br/>
+            Besides still using sine, cosine, and tangent in the calculations, I also spent quite some time figuring out how far the rectangular gap should move. Because I had coordinates of points instead of lengths of lines, I needed to alter the formulas.<br/>
+            Another thing was that I also used the mirror function. Thanks to me creating the shape through lines, I was able to use one side as an axis and mirrored the piece.
+            </p>
+            <p>
+            Once the connecting piece was also finished, I baked it. I had to use Rhino to trim away the axis/line lying in the middle of the piece. But other than that, all was done in Grasshopper.
+            </p>
+
+            <h2>Source files:</h2>
+            <p>
+            <a href="A1_LaserCut.3dm"> Rhino file of extruded pieces </a><br/>
+            <a href="A1_LaserCut.AI"> Adobe Illustrator file of curves for cutting </a>                
+            </p>
+
+            <h2>Acknowledgements:</h2>
+            <p>
+            My math teacher in middle school for teaching me how to calculate polygon's angle degree<br/>
+            Technicians at the MILL for helping me set up the laser cutter<br/>
+            Junchao, Nadya and others for support on Discord!
+            </p>
+            <p>
+            <a href="https://sherrywang413.github.io/HCDE533/"> Return to Sherry's homepage </a>        
             </p>
         </div>
         
