@@ -30,11 +30,13 @@
             <img src="A2_Matt reference.png" width=400></a>
             </p>
             <p>
-            Here's the link: <a href="http://fab.cba.mit.edu/classes/863.10/people/matt.blackshaw/week2.html"> Matt Blackshaw's Homework from MIT </a> <br/>              
+            Here's the link: <a href="http://fab.cba.mit.edu/classes/863.10/people/matt.blackshaw/week2.html"> Matt Blackshaw's Homework from MIT </a>
+            </p>
+            <p>
             To be clear, this person did not build a parametric model. As I did all the calculations for dodecahedrons and pentagons in the last assignment, I used all those insisting data and started building.
             </p>
             <p>
-            Before diving deep into the grasshopper definition and explanation, here's a screenshot of the final shapes:
+            Before diving deep into the Grasshopper definition and explanation, here's a screenshot of the final shapes:
             </p>
             <p>
             <img src="A2_Final rhino.png" width=600></a>
@@ -62,39 +64,45 @@
             Let's take a look at the reference picture I found:
             </p>
             <p>
-            <img src="A2_Matt reference2.png" width=400></a>
+            <img src="A2_Matt reference 2.png" width=400></a>
             </p>
             <p>
-            Doesn't seem so complicated, I thought. I would just create two smaller pentagons, trim out the inner part, then draw two vertical lines and trim again. The gaps should be even easier, attach the midpoints together and we're good to go!<br/>
-            Boy did it slap me in my face hard. With Grasshopper, I can't draw vertical lines easily, I can't trim the curves using curves, I can't find all the midpoints I want, and for some reasons my Math bachelors degree can't help me get all the calculations right.<br/>
-            Take a look at how far I went and how hard I failed:
+            Doesn't seem so complicated, I thought. I would just create two smaller pentagons, trim out the inner part, then draw two vertical lines and trim again. The gaps should be even easier, attach the midpoints together and we're good to go!
+            </p>
+            <p>
+            Boy was I wrong. With Grasshopper, I can't draw vertical lines easily, I can't trim the curves using curves, I can't find all the midpoints I want, and for some reasons my Math bachelors degree can't help me get all the calculations right.<br/>
+            Here's how far I went:
             </p>
             <p>
             <img src="A2_Failed.png" width=800></a>
             </p>
             <p>
-            With all this effort, the second rectangle misses its edge by 0.x millimeters. It probably would look okay after being laser-cutted. But as a perfectionist, I started over.
+            With all this effort, the second rectangle missed its edge by 0.x millimeters. It probably would look okay after being laser-cutted. But as a perfectionist, I started over.
             </p>
             <p>
             This time, I realized that I needed to think outside the box.<br/>
-            Instead of drawing and trimming, I could calculate the coordinates of each points, create lines between them, and bam we have a trapezoid.<br/>
+            Instead of drawing and trimming, I could calculate the coordinates of each points, create lines between them, and bam we have a trapezoid.
+            </p>
+            <p>
+            <img src="A2_Draw.png" width=600></a>
+            </p>
             The same thing could happen with the rectangle. Once half of the piece is done, I can trim out the part and then mirror it around one side as an axis.<br/>
-            Before working with GH, I also wrote down all the equations and formulas on a piece of paper. Here's the second and successful version of the connecting piece:
+            Before working with GH, I also wrote down all the equations and formulas on a piece of paper.<br/>
+            So here's the second and successful version of the connecting piece:
             </p>
             <p>
             <img src="A2_GH3.png" width=800></a>
             </p>
             <p>
-            This screenshot looks massive, but some were repetitive work and looked more organized in details. <br/>
+            This screenshot looks massive, but some were repetitive work and looked much more organized. <br/>
             Besides still using sine, cosine, and tangent in the calculations, I also spent quite some time figuring out how far the rectangular gap should move. Because I had coordinates of points instead of lengths of lines, I needed to alter the formulas.<br/>
-            Another thing was that I also used the mirror function. Thanks to me creating the shape through lines, I was able to use one side as an axis and mirrored the piece.
-            </p>
-            <p>
-            Once the connecting piece was also finished, I baked it. I had to use Rhino to trim away the axis/line lying in the middle of the piece. But other than that, all was done in Grasshopper.
+            Another thing was that I also used the mirror function. Thanks to me creating the shape through lines, I was able to use one side as an axis and mirrored the piece.<br/>
+            Once the connecting piece was also finished, I baked it.<br/>
+            I had to use Rhino to trim away the axis/line lying in the middle of the piece. But other than that, all was done in Grasshopper.
             </p>
 
             <p>
-            For cutting the pieces, I did exactly the same as Assignment 1. Exporting the file to Adobe Illustrator, went to the MILL, set the laser cutter to speed 25, power 40, freq 10, etc.
+            When laser-cutting the pieces, I did exactly the same as Assignment 1. Exported the file to Adobe Illustrator, went to the MILL, set the laser cutter to speed 25, power 40, freq 10, etc.
             </p>
             <p>
             And finally here's the output!
@@ -105,8 +113,8 @@
 
             <h2>Source files:</h2>
             <p>
-            <a href="A2_GHDefinition1.gh"> Grasshopper file of pentagons </a><br/>
-            <a href="A2_GHDefinition3.gh"> Grasshopper file of connecting pieces </a><br/>
+            <a href="A2_GHDefinition1.gh"> Grasshopper definition of pentagons </a><br/>
+            <a href="A2_GHDefinition3.gh"> Grasshopper definition of connecting pieces </a><br/>
             <a href="A2_Parametric Modelling.3dm"> Rhino file of all pieces </a><br/>
             <a href="A2_Parametric Modelling.AI"> Adobe Illustrator file of curves for cutting </a>                
             </p>
