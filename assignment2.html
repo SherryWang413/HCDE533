@@ -24,7 +24,7 @@
             <img src="A2_final.jpg" width=600></a>
             </p>
             <p>
-            I wanted to inherit my assignment 1's idea but did a little (turned out to be a LOT) improvements. Instead of using circles to build a dodecahedron, I decided to use pentagons. I got inspired from this:
+            I wanted to inherit my assignment 1's idea but did a little (turned out to be a LOT) improvements. Instead of using circles to build a dodecahedron, I decided to use pentagons. I got inspired from this student's previous homework:
             </p>
             <p>
             <img src="A2_Matt reference.png" width=400></a>
@@ -33,7 +33,7 @@
             Here's the link: <a href="http://fab.cba.mit.edu/classes/863.10/people/matt.blackshaw/week2.html"> Matt Blackshaw's Homework from MIT </a>
             </p>
             <p>
-            To be clear, this person did not build a parametric model. As I did all the calculations for dodecahedrons and pentagons in the last assignment, I used all those insisting data and started building.
+            To be clear, this person did not build a parametric model. And as I did all the calculations for dodecahedrons and pentagons in the last assignment, I used all those insisting data and started building.
             </p>
             <p>
             Before diving deep into the Grasshopper definition and explanation, here's a screenshot of the final shapes:
@@ -42,11 +42,11 @@
             <img src="A2_Final rhino.png" width=600></a>
             </p>
             <p>
-            I continued using the cardboard leftovers from assignment 1, which have slightly different thickness, ranging from 3.3mm to 3.9mm. Last time during assembling, the pieces were a little too tight, so for this project I decided to go with 3.2mm as the width of my gaps.
+            I continued using the cardboard leftovers from assignment 1, which have slightly different thickness, ranging from 3.3mm to 3.9mm. Last time during assembling, the pieces were a little too tight, so for this project I decided to go with 3.2mm as the width of my gaps, instead of the original 3.0mm.
             </p>
 
             <p>
-            Here comes the Grasshopper talking. Keep in mind that the thickness of the cardboard CAN BE VARIED as I set it as a number slider and linked everything based on it.
+            Here comes the Grasshopper talking. Keep in mind that the thickness of the cardboard can be varied as required, as I set it as a number slider and linked everything based on it. If you download the GH files, you can see sticky notes indicating where to slide and where to bake.
             </p>
             <p>
             I started by making the pentagon. Here's a complete screenshot of the definition:
@@ -56,7 +56,7 @@
             </p>
             <p>
             Since we went over a circular example in class, I repeated a similar procedure for this part.<br/>
-            One thing different and difficult was that when creating a polygon in GH, it asked for a radius and I put in an integer. However, when I was moving the rectangular gap to a desired position, the radius was no longer helpful. I needed to calculate the height and the side length of the pentagon using sine, cosine, and tangent (and converting degrees to radians). And because of the shape, the angles were 54, 72, 108, etc.<br/>
+            One thing different and difficult was that when creating a polygon in GH, it asked for a radius and I put in an integer. However, when I was moving the rectangular gap to a desired position, the radius was no longer helpful. I needed to calculate the height and the side length of the pentagon using sine, cosine, and tangent. And because of the shape, the angles were 54°, 72°, 108°, etc., so I also needed to convert from degrees to radians.<br/>
             This was the first time I realized this idea might be a mistake, but I soldiered through, naively.
             </p>
             <p>
