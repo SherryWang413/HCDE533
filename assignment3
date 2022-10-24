@@ -1,0 +1,96 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+        <title>Sherry Wang's HCDE533 Page</title> 
+
+        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+
+    </head> 
+    <body> 
+
+        <div class="header">
+            <h1>Assignment 1: Modelling and Laser Cutting</h1>
+            
+            <p>
+            By Sherry Wang
+            </p>
+            <p>
+            Here is the finished and assembled piece for assignment 1, including 12 large circles and 30 small ones:
+            </p>
+            <p>
+            <img src="placed.jpg" width=600></a>
+            </p>
+            <p>
+            I came across this picture while searching on the Internet for some inspirations:
+            </p>
+            <p>
+            <img src="source.JPG" width=400></a>
+            </p>
+            <p>
+            The source file can be found via the watermark or from this link: <a href="http://xhslink.com/5iHYqk"> http://xhslink.com/5iHYqk </a> <br/>              
+            Using this picture and my vague memory about polygons, I determined the degrees of gaps of each circle (12 large ones and 30 small ones):
+            </p>
+            <p>
+            <img src="angles.png" width=400></a>
+            </p>
+            <p>
+            Then I found some cardboards and measured the thickness of them. I realized that different places have slightly different thickness, ranging from 3.3mm to 3.9mm.
+            </p>
+            <p>
+            <img src="33.jpg" width=300>
+            <img src="39.jpg" width=300></a>
+            </p>
+            <p>
+            I also recalled Junchao's reminder that the laser might burn away some material, so I decided to use 3.0mm as the width of my gaps.
+            </p>
+            <p>
+            Once all data are figured out, I began drawing the shapes in Rhino.<br/>
+            The two shapes are similar, combining a circle and some rectangles together and then trimming down.<br/>
+            I used something I learned from Junchao's demo video, which was command "ArrayPolar". This allowed me to quickly drew symmetrical rectangles spreading equally across the circle.<br/>
+            I also extruded the shapes to get a clearer feeling of the finished pieces.
+            </p>
+            <p>
+            <img src="extruded.png" width=600></a>
+            </p>
+            <p>
+            Before cutting, I exported the curves from Rhino to Adobe Illustrator and duplicated them with the desired amount and size. I also adjusted the stroke thickness, which is why this picture looks a little fuzzy.
+            </p>
+            <p>
+            <img src="Capture.JPG" width=600></a>
+            </p>
+            <p>
+            On the laser cutter, I used settings: speed 25, power 40, freq 10.<br/>
+            I test cutted a LOT of pieces (there was a malfuction of the machine) and then finished the rest.
+            </p>
+            <p>
+            <img src="cutting.jpg" width=400></a>
+            </p>
+            <p>
+            And finally for the last step, I assembled everything together and it looked great! I can even lift it up!
+            </p>
+            <p>
+            <img src="placed.jpg" width=600><img src="lifted.jpg" width=600></a>
+            </p>
+
+            <h2>Source files:</h2>
+            <p>
+            <a href="A1_LaserCut.3dm"> Rhino file of extruded pieces </a><br/>
+            <a href="A1_LaserCut [Converted].ai"> Adobe Illustrator file of curves for cutting </a>                
+            </p>
+
+            <h2>Acknowledgements:</h2>
+            <p>
+            My math teacher in middle school for teaching me how to calculate polygon's angle degree<br/>
+            Technicians at the MILL for helping me set up the laser cutter<br/>
+            Junchao, Nadya and others for support on Discord!
+            </p>
+            <p>
+            <a href="https://sherrywang413.github.io/HCDE533/"> Return to Sherry's homepage </a>        
+            </p>
+        </div>
+        
+    </body>
+</html>
