@@ -1,1 +1,130 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
 
+        <title>Sherry Wang's HCDE533 Page</title> 
+
+        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+
+    </head> 
+    <body> 
+
+        <div class="header">
+            <h1>Assignment 4: Subtractive Manufacturing</h1>
+            
+            <p>
+            By Sherry Wang
+            </p>
+            <p>
+            Before diving into the documentation, please note that this has been an extremely busy week for me. As a result, I only had time to do this assignment on Wednesday. By then, Junchao's office hour was not published and Discord was not active yet. I wouldn't consider this assignment of mine to be a complete success, but I figured out eventually what I did wrong and learned from it!<br/>
+            As usual, below are images of the final outcome. The physical box's joints were connected via the help of tapes (which I'll discuss later), but the assembled piece in Rhino should show that all dimensions were correct.
+            </p>
+            <p>
+            <img src="final.jpg" width=400><img src="assembled.jpg" width=400></a>
+            </p>
+            <p>
+            Using the tutorial slides being shared to the class as a guide, I started by creating the model files in Rhino. I wanted to design a box with a bottom and four sides. After measuring the sheets and spacing out the imaginery design, I decided that the bottom should be orignated from a square of 40mm*40mm and the sides from rectangles of 20mm*40mm.<br/>
+            Next, I measured the thickness of these sheets (1.6mm) using a caliper to create the joints. The joints are little rectangles of width 1.6mm, so that the pieces can be easily connected. For lengths of joints, I used a combination of 4mm, 5mm, and 6mm, so that they are more evenly spaced out on the design and aesthetically pleasing.<br/>
+            I also remembered to leave spaces for the dogbone by making tiny squares with side length 0.8mm, which was the diameter of the 1/32" end mill we would be using.<br/>
+            Then I trimmed and joined all curves together so that the pattern was closed and ready to be exported to dxf files.
+            </p>
+            <p>
+            I became really familiar with Rhino by now, but one thing that was tricky was the addition of a bottom. Since the bottom would have fixed lengths, I was cautious that (longer side length + joint width on one shorter side) = bottom length. This way, when assembling, it would be connected properly.<br/>
+            I would also recommend assembling the pieces together in Rhino first before cutting. I failed to do that and wasted some materials.
+            </p>
+            <p>
+            Once the models were done and exported to dxf files in Rhino, I used KiCad to plot them from dxf files to gbr files. The tutorial slides were very comprehensive on this step.          
+            </p>
+    
+            <p>
+            Next, I brought the files and materials to the Mill and used their computers (which had the Bantam tool) and the CNC milling machines. After vaccum cleaning the inside of the #2 machine and plugging it in, I followed the tutorial slides once again to start importing the files.<br/>
+            While most set up was easy, there was one place where calculations were needed. For "Trace Depth" in Initial Setup, enter the thickness of the FR1 sheet, since you want to cut all the way through. For "Material Offset Z" in Material Setup, enter the subtraction of the sacrifice-tape-FR1 sandwich and the thickness of the FR1 sheet.<br/>
+            Another thing that might need some caution would be the Material Size: make sure the X and Y match your sheet and are not flipped.
+            </p>
+            <p>
+            <img src="setup.JPG" width=600></a>
+            </p>
+            <p>
+            Then, I installed the 1/32" end mill into the machine, did a touch-off, and load the sheet. Be very sure that the sandwich of the sheet and sacrifice piece sticks to the platform very tightly. Or else the pieces might fly away when cutting (happened to me two or three times). <br/>
+            </p>
+            <p>
+            <img src="tool.JPG" width=600></a>
+            </p>
+            <p>
+            At last, close the safety cover of the machine and start the job! There would be an Estimated Milling Time shown on computer screen, and usually it takes about several minutes.
+            </p>
+
+            <p>
+            After about three minutes, the bottom of my box was done. But that's when I noticed that the edges were off. As you can see, the dogbones were too large and the piece looked like an actual dog chewed on it.
+            </p>
+            <p>
+            <img src="chewed.jpg" width=600></a>
+            </p>
+            <p>
+            Not knowing what caused this, I came up with five possible reasons and decided to rule each out when milling the sides:
+            </p>
+            <p>
+            1. When designing the joints, I first shrank the inner pieces to 95% the size of the outer joints. Perhaps that was too much? I remilled the joints without shrinking, but still did not work.<br/>
+            2. The entire model I created might be wrong? This was not the reason either, as I successfully assembled the box in Rhino.<br/>
+            3. The "Material Offset Z" might be too deep, causing the end mill to be too low and damaging the sheet? To solve this, I tried changing from 1.7mm to 1.6mm but did not see any difference.<br/>
+            4. The FR1 sheet being given did not have the same density at all places? I couldn't really solve this, but since the entire class was using this material, I assumed this was not the problem.<br/>
+            5. The end mill was damaged? I wanted to change to another end mill to prove/disprove this, but I ran out of sheets (both mine and a friend's since I knew he was doing the 3D printing option) and had to give up.
+            </p>
+            <p>
+            In the end, I printed about ten pieces of the sides, but was as frustrated as ever.
+            </p>
+            <p>
+            <img src="fail2.jpg" width=400><img src="fail3.jpg" width=400></a>
+            </p>
+            <p>
+            I tried connecting and pressing them together using my fingers and later tapes, and here's the result:
+            </p>
+            <p>
+            <img src="finger.jpg" width=400><img src="final.jpg" width=400></a>
+            </p>
+            <p>
+            This is what it should look like, from similar angles:
+            </p>
+            <p>
+            <img src="assembled2.jpg" width=400><img src="assembled.jpg" width=400></a>
+            </p>
+            <p>
+            UPDATE 10/31/2022: I finally had time to look at Discord and saw @minahkb's post.
+            </p>
+            <p>
+            <img src="discord.png" width=600></a>
+            </p>
+            <p>
+            When milling, I tried turning off "Outline", but didn't adjust the other two switches. If I had, the outcome would have been successful :/ But now I know!
+            </p>
+
+
+            <h2>Source files:</h2>
+            <p>
+            <a href="bottom.3dm"> bottom model </a><br/>
+            <a href="bottom.dxf"> bottom dxf file exported from Rhino </a><br/>
+            <a href="bottom-Edge_Cuts.gbr"> bottom gbr file plotted from KiCad </a>
+            </p>
+            <p>
+            <a href="side2.3dm"> side model </a><br/>
+            <a href="side2.dxf"> side dxf file exported from Rhino </a><br/>  
+            <a href="side2-Edge_Cuts.gbr"> side gbr file plotted from KiCad </a>                               
+            </p>
+            <p>
+            <a href="assembled.3dm"> assembled box model in Rhino </a>                               
+            </p>
+
+            <h2>Acknowledgements:</h2>
+            <p>
+            @minahkb and Junchao on Discord for letting me know what I did wrong!<br/>
+            Junchao and Nadya for the cutting sheets and the tutorial slides!
+            </p>
+            <p>
+            <a href="https://sherrywang413.github.io/HCDE533/"> Return to Sherry's homepage </a>        
+            </p>
+        </div>
+        
+    </body>
+</html>
