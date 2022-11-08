@@ -60,12 +60,41 @@
             My meshing process went very smoothly, and I think it was mainly because I was using relatively easy files (unlike baby Yoda, of course) and the creators of the files were very nice people!
             </p>
 
-
             <p>
-            Now for the lamp,
+            Now for the lamp, I started jumping through rabbit holes online. From <a href="https://www.google.com/amp/s/www.architecturaldigest.com/gallery/best-table-lamps-and-bedside-lamps/amp"> Best Table Lamps </a>, I discovered a type called "origami lamps", which people use rice paper to create. As I dug deeper into handmade lamps, I went on Etsy and saw more wooden lights like <a href="https://www.etsy.com/listing/1256269786/wooden-pendant-lampshade-freya-wood-lamp?ref=listing_page_ad_row-3&pro=1&frs=1&sts=1&plkey=a66c6e111207782f7398dea3063099a564340772%3A1256269786"> this</a> and <a href="https://www.etsy.com/listing/991394543/natural-walnut-lamp-the-majesty-hand?ref=listing_page_ad_row-2&pro=1&frs=1&sts=1&plkey=29ac5843b9bf3ce104f8411b363354d4a910c4b2%3A991394543"> that</a>. I was fascinated by the wavy structure, and recalled that lattice hinge could help achieve that when laser cutting.
             </p>
 
-
+            <p>
+            Then I started learning all about lattice hinge. At first, I got an existing open source file of the <a href="LatticeHingeBending_EchantillonsSimples.gh"> pattern</a>.
+            </p>
+            <p>
+            <img src="lattice_hinge.png" width=600></a>
+            </p>
+            <p>
+            It was in French, so I had to learn a new language to read the Grasshopper definition. I did that and successfully baked the pattern, but realized the pattern had constraints that could only work for rectangles. For my situation, as I was aiming for a table lamp that can stand stably, I wanted a traingular shape. As a result, although this was a comprehensive and complicated definition, I couldn't use it.
+            </p>
+            <p>
+            Lucky for me, the website where I got the lattice hinge pattern from was also selling wooden lamps. Here's an image of a triangular lamp that they were selling. I did not purchase the product, so the image was as vague as possible.
+            </p>
+            <p>
+            <img src="reference.jpeg" width=600></a>
+            </p>
+            <p>
+            I decided to follow this image and tried designing the side shades first. I had several attempts when creating the lattice hinges by myself, due to the traingle side having curvy edges and me hoping the hinges to match those curves. I wanted to use Grasshopper to create a definition, but when creating the curvy edges, I did it manually for a natural feeling, so functions were not of use. In the end, I wrote down all the dimensions of the hinges in a notebook and here's the result:
+            </p>
+            <p>
+            <img src="side.png" width=600></a><br/>
+            For the dimension of the lamp, the reference website had it at 30x30x30 cm, so I did the same.
+            </p>
+            <p>
+            The next piece I created was the top of the lamp, which was a triangle. Since it would be attached to the top of the side shades, the dimensions should match. So I went for an equilateral triangle with 10cm edges. I filleted the corners to be round, also for a natural vibe. For pieces to be held together, gaps were created. I referred to the website once again and put the gaps at the corners, each taking 4.8mm width and 20mm length. The width was the same as the thickness of woodboards I would be using. I filleted the sharp corners using a radius of 1, so that when assembling, it would be easier.
+            </p>
+            <p>
+            <img src="top.png" width=600></a>
+            </p>
+            <p>
+            And that's all I did for the first part of the lamp! I found and modified a design I like, finished the most difficult part, a.k.a. the lattice hinges, and started working on other parts!
+            </p>
 
             <h2>Source files:</h2>
             <p>
