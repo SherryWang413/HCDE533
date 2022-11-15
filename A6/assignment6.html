@@ -18,98 +18,56 @@
             By Sherry Wang
             </p>
             <p>
-            As always, here are some images of what my lamp look like:
-            <p>
-            <img src="lamp1.jpg" width=400><img src="lamp2.jpg" width=400></a>
+            For the first week of this assignment, I focused on the ideation and design. I was inspired to make a cactus, and as I was looking through thingiverse, I noticed this <a href="https://www.thingiverse.com/thing:2956910"> cactus ring stand</a>. So I downloaded the stl file to take a look.
             </p>
             <p>
-            Previously in A5, I talked about trying to laser-cut a lamp that has lattice-hinged sides and a triangular shape. I used this image as a reference:
+            <img src="reference.png" width=600></a>
             </p>
             <p>
-            <img src="reference.jpeg" width=600></a>
+            This mesh was closed and looked very promising. Since we were asked to do a 2-part mold, I started cutting it in half using the "MeshBooleanSplit" command and got two open meshes as a result.
             </p>
             <p>
-            I finished the three sides by completing the lattice hinge on my own and this was what it looked like:
+            <img src="fail_split.png" width=600></a>
             </p>
             <p>
-            <img src="side.png" width=600></a>
+            That wasn't good, so I used "Check Mesh" and "Repair Mesh", hoping to bring it back to the right track. Even without using commands, I noticed the holes that appeared in my split master piece:
             </p>
             <p>
-            I also created the top of the lamp, which was a triangle:
+            <img src="hole.png" width=600></a>
             </p>
             <p>
-            <img src="top.png" width=600></a>
+            I tried so hard but still failed to make these halves back to closed meshes. I also tried to use other cactus thing files but encountered similar issues. As I began to feel desparate, I suddenly recalled that when I imported the original cactus stl file in, it contained two closed meshes - the cactus and the holder dish.
             </p>
             <p>
-            Beginning this week, I started by designing the bottom of the lamp, which was a hexagon. I measured the diameters of the innered and the lightbulb and the width of the plug. Since my plan was to have a circle in the middle of the bottom, let the cord go through, and block the innered from passing through this circle, its diameter should be between 25.1mm (the width of the plug) and 37.3mm (the diameter of the innered).<br/>
-            Besides the circle, the bottom also included gaps that fit the bones and connecting pieces of the lamp. Since I didn't want to use glue, I did quite some explorations on how to hold the sides together and used the reference image once again. In the end, the bottom of the lamp looks like this:
+            <img src="closed.png" width=600></a>
             </p>
             <p>
-            <img src="bottom.png" width=600></a>
+            That's when I began to consider the possibility of having these two existing closed meshes as two parts of my mold. Instead of the two parts being symmetrical and split from the middle, I would compromise to do two completely different molds. Another change I made was switching the curved holder dish to a simple cylinder so that no overlap would occur among the two parts of the mold.
             </p>
             <p>
-            The next pieces were the connections that would hold up the sides. Looking at the reference image, I created a version (on the right) that was exactly the same. However, I was a little afraid that the part at the bottom would be too thin and easy to break, therefore I did some alternations and came up with the one on the left, which was also the one that I eventually used.
+            So, using the cactus' bottom as the base, I created a box around it and made sure the box was larger than the holder dish, so that two parts would be able to piece together. I also added four concave spheres as keys/registration points, each having a radius of 5.25mm for some tolerance for ease of joining.
             </p>
             <p>
-            <img src="connect.png" width=600></a>
+            For the holder dish's box, I used the same bottom but a different height. I also added the pour + vent hole. I didn't make the hole too small, since it would be not only difficult to pour plaster in but also unnecessary for the flat cylinder. For this box's keys, I added four convex spheres with radii of 5mm. And here's a perspective view of the outcome:
             </p>
             <p>
-            The bones of the lamp were the most difficult and I saved them for the last. Because the top and bottom were different size-wise, the bones connecting these two pieces and holding the sides at the same time should have an angle. I had no idea what the angle should be, so I decided to go to the Mill, cut all the other pieces out, and eyeball the angle based on the real situation.
+            <img src="perspective.png" width=600></a>
             </p>
-            <p>
-            My plan was to cut the pieces first using cardboards, and then move to woodboards, but that led to a difficulty: these boards have different thickness (3.3mm for cardboards and 4.8mm for woodboards) and therefore I needed to scale my gaps accordingly. I did some calcuations, resized all the designs, and started cutting. Similar to before, I used 25 speed, 50 power, and 10 frequency.
-            </p>
-            <p>
-            After cutting, I tried assembling all the existing pieces together to figure out the dimensions of the bones. I realized that for the height, it would be better if it's shorter. Since making the bones too high would create wide gaps between the sides and even a possibility of them not connecting to both the top and the bottom. Keeping that in mind, I started designing the bones in Rhino. I first drew the one on the left and laser cut it out. Realizing that it was too short and blocking the sides from connecting with the connecting pieces, I made a second version (on the right).
-            </p>
-            <p>
-            <img src="bone.png" width=600></a>
-            </p>
-            <p>
-            And finally, I had all the pieces and was ready to assemble!!
-            </p>
-            <p>
-            <img src="1.jpg" width=600></a>
-            </p>
-            <p>
-            <img src="2.jpg" width=600></a>
-            </p>
-            <p>
-            <img src="3.jpg" width=600></a>
-            </p>
-            <p>
-            I was really satisfied with the turnout and decided to not use woodboards to cut it again! It looks like this when being turned on:
-            <p>
-            <img src="lamp1.jpg" width=400><img src="lamp2.jpg" width=400></a>
-            </p>
-            <p>
-            I'm also able to remove the lamp from the innered, not using any glue, fasteners, adhesive, etc. The innered sits on the bottom that I created, and the lightbulb is stuck between the three bones perfectly.
-            </p>
-            <p>
-            <img src="innered.jpg" width=600></a>
-            </p>
-            <p>
-            For the molding and casting assignment, please go to this link: <a href="https://sherrywang413.github.io/HCDE533/A6/assignment6.html"> Assignment 6 </a>
-            </p>
+
   
 
             <h2>Source files:</h2>
             <p>
-            <a href="side.3dm"> the sides of the lamp Rhino file </a><br/>
-            <a href="side.AI"> the sides of the lamp Illustrator file </a><br/>
-            <a href="top.3dm"> the top of the lamp Rhino file </a><br/>
-            <a href="top.AI"> the top of the lamp Illustrator file </a><br/>
-            <a href="bottom.3dm"> the bottom of the lamp Rhino file </a><br/>
-            <a href="bottom2.AI"> the bottom of the lamp Illustrator file </a><br/>
-            <a href="connects.3dm"> the connecting pieces of the lamp Rhino file </a><br/>
-            <a href="connects.AI"> the connecting pieces of the lamp Illustrator file </a><br/>
-            <a href="bone.3dm"> the bones of the lamp Rhino file </a><br/>
-            <a href="bone3.AI"> the boness of the lamp Illustrator file </a>
+            <a href="cactusRingStand2.stl"> cactus original stl file from Thingiverse </a><br/>
+            <a href="mold2_use.3dm"> mold rhino file </a><br/>
+            <a href="mold2_use.stl"> mold stl file going into Cura </a>
             </p>
 
             <h2>Acknowledgements:</h2>
             <p>
-            WeBentWood for the original design!
+            @m0nsieurX from Thingiverse for the stl file!
+            @Danli on Discord for the process chart!
+            @baileynd on Discord for the physical joining tips!
             </p>
             <p>
             <a href="https://sherrywang413.github.io/HCDE533/"> Return to Sherry's homepage </a>        
