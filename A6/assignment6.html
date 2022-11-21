@@ -18,22 +18,62 @@
             By Sherry Wang
             </p>
             <p>
-            For the first week of this assignment, I focused on the ideation and design. I was inspired to make a cactus, and as I was looking through thingiverse, I noticed this <a href="https://www.thingiverse.com/thing:2956910"> cactus ring stand</a>. So I downloaded the stl file to take a look.
+            This assignment was rocky for me, so for the documentation, I'm splitting it into two parts: the Minimum Viable Product being casted and delivered, and the original ideation in CAD.
+            </p>
+            
+            <h2>MVP:</h2>
+            <p>
+            As usual, here's the group pic of the final deliverables - 4 identical parts in plaster, 1 mold in silicone, and 1 mold for mold 3d printed:
             </p>
             <p>
-            <img src="reference.png" width=600></a>
+            <img src="final.png" width=600></a>
             </p>
             <p>
-            This mesh was closed and looked very promising. Since we were asked to do a 2-part mold, I started cutting it in half using the "MeshBooleanSplit" command and got two open meshes as a result.
+            The design in CAD was very easy. I made a cube, surrounded it with a box, and then added four keys in the corners. There were a few things I kept in mind. First, the box should be higher than the cube, so that the silicone being poured can close up on top. Second, the spherical keys should have a little bit of tolerance in the ease of joining: I applied a difference of 0.5mm. Third, the pour + vent hole shouldn't be too narrow, or else it would be difficult to pour the plaster in.
+            </p>
+            <p>
+            <img src="cube_perspective.png" width=600></a>
+            </p>
+            <p>
+            After the design for this mold for mold was done, I exported it into an stl file and a gcode file and started printing. It took 4 hours and 16 minutes to print, and the outcome is here:
+            </p>
+            <p>
+            <img src="printed.png" width=600></a>
+            </p>
+            <p>
+            Next, I mixed the oommoo together using the volume ratio of 1:1 and poured it into the mold for mold. I let it sit overnight, so it was well past the 6-hour curing timeframe. I used a knife to carefully lever the mold out.
+            </p>
+            <p>
+            <img src="night.png" width=400><img src="day.png" width=400></a>
+            </p>
+            <p>
+            Once the mold was done, I used tapes to bind the two parts together to prevent the plaster from leaking. Tapes could not stick on silicone, so I had to apply tapes over tapes. I tried using rubber bands as well, but they were so stretchy that the mold got crushed a bit.
+            </p>
+            <p>
+            Finally, I mixed the hydrostone with water and poured the mixture in through the hole. The first two cubes were very fast to cast - I opened the mold after about six hours each and they were already done. There were some air bubbles, but I figured if I shake the mold better in the future, it should solve the problem.
+            </p>
+            <p>
+            <img src="first_two.png" width=600></a>
+            </p>
+            <p>
+            The third cube was interesting. As I mixed the hydrostone, it got hotter and stickier very soon, possibly reacting with water. Nevertheless, I poured it in and got this:
+            </p>
+            <p>
+            <img src="fail_plaster.png" width=600></a>
+            </p>
+            <p>
+            That's unsatisfying and a little disgusting. So I threw it away and started again. It went without more incident, but taking much longer to cast than the first two, at least 24 hours. Eventually, all were done.
+            </p>
+            <p>
+            <img src="final.png" width=600></a>
+            </p>
+
+            <h2>Original Ideation:</h2>
+            <p>
+            As you can tell, those cubes were not so impressive. That's because they were a backup plan. My original idea was to design a cactus ring holder. During the first week of this assignment, I failed to vertically cut the master part in half and product two closed parts. The meshes remain open no matter what:
             </p>
             <p>
             <img src="fail_split.png" width=600></a>
-            </p>
-            <p>
-            That wasn't good, so I used "Check Mesh" and "Repair Mesh", hoping to bring it back to the right track. Even without using commands, I noticed the holes that appeared in my split master piece:
-            </p>
-            <p>
-            <img src="hole.png" width=600></a>
             </p>
             <p>
             I tried so hard but still failed to make these halves back to closed meshes. I also tried to use other cactus thing files but encountered similar issues. As I began to feel desparate, I suddenly recalled that when I imported the original cactus stl file in, it contained two closed meshes - the cactus and the holder dish.
@@ -42,45 +82,49 @@
             <img src="closed.png" width=600></a>
             </p>
             <p>
-            UPDATE on Tuesday in class: I just realized that the following idea would not work, so I'm currently confused and looking for another way :/ <br/>
-            That's when I began to consider the possibility of having these two existing closed meshes as two parts of my mold. Instead of the two parts being symmetrical and split from the middle, I would compromise to do two completely different molds. Another change I made was switching the curved holder dish to a simple cylinder so that no overlap would occur among the two parts of the mold.
-            </p>
-            <p>
-            So, using the cactus' bottom as the base, I created a box around it and made sure the box was larger than the holder dish, so that two parts would be able to piece together. I also added four concave spheres as keys/registration points, each having a radius of 5.25mm for some tolerance for ease of joining.
-            </p>
-            <p>
-            For the holder dish's box, I used the same bottom but a different height. I also added the pour + vent hole. I didn't make the hole too small, since it would be not only difficult to pour plaster in but also unnecessary for the flat cylinder. For this box's keys, I added four convex spheres with radii of 5mm. And here's a perspective view of the outcome:
+            Then I tried cutting it horizontally and got two closed meshes. I thought it would work and started printing. As I was half way through, I realized that there was no way I could get the silicone mold out because of the special cactus shape. I noticed this during class, when someone was presenting (Joyce perhaps?). Although I had a mental breakdown, I'm trully grateful - it's always better to know it then than later.    
             </p>
             <p>
             <img src="perspective.png" width=600></a>
             </p>
             <p>
-            After making sure this mold for mold was correct, I started the 3d printing process. At first, I exported my two parts together in one single stl file. But as I printed, the filament kept messing up no matter how I adjusted the bed level. I realized it might be because the two parts were aligned horizontally, ending up with a great width, but the printer was most efficient printing in the middle. Therefore, I broke down the two parts into two stl files so that the printer would print separately.
+            I asked my housemate to pause the printing and went to consult Junchao during the break. We decided to try to vertically split the cactus again. Although that was unsuccessful during the short break, Junchao did advice me to turn the mesh into a polysurface and then repeat the split process. I wasn't sure if that would work, so I deviated from this idea and focused on my backup cube plan, so that I would have something to turn in for the assignment.
             </p>
             <p>
-            As of now (Tuesday 4PM), I'm still in the progress of printing and finished part 1 of the mold for mold:
+            While I was casting the cubes, I asked Danli for more thoughts on the cactus. She confirmed that turning the mesh into a polysurface could work, but I'd need to reduce the mesh first. Due to the small size of this design, reducing it to 100 polygons could be a good idea. I did that, used the command MeshToNurb, and got a closed polysurface-d cactus. Then I added a holder dish, which was a cylinder and Boolean-Unioned the cactus and the dish togther. I cut the entire thing in half using Boolean-Split and voila:
             </p>
             <p>
-            <img src="progress.jpg" width=600></a>
+            <img src="split.png" width=600></a>
+            </p>
+            <p>
+            They were finally closed too. And that was where I stopped, because I ran out of time and hydrostone, but I'm now certain that this would work.
+            </p>
+            <p>
+            <img src="split_closed.png" width=600></a>
             </p>
 
   
 
             <h2>Source files:</h2>
             <p>
-            <a href="cactusRingStand2.stl"> cactus original stl file from Thingiverse </a><br/>
-            <a href="mold2_use.3dm"> mold rhino file </a><br/>
-            <a href="mold2_use1.stl"> cactus mold stl file going into Cura </a><br/>
-            <a href="CE3PRO_mold2_use1.gcode"> cactus mold gcode file going into the printer </a><br/>
-            <a href="mold2_use2.stl"> holder dish mold stl file going into Cura </a><br/>
-            <a href="CE3PRO_mold2_use2.gcode"> holder dish mold gcode file going into the printer </a>
+            Only successful files are included here:
+            </p>
+            <p>
+            <a href="cube.3dm"> MVP cube mold for mold rhino file </a><br/>
+            <a href="cube.stl"> MVP cube stl file going into Cura </a><br/>
+            <a href="CE3PRO_cube.gcode"> MVP cube gcode file going into the printer </a>
+            </p>
+            <p>
+            <a href="cactusRingStand2.stl"> cactus ring holder original stl file from Thingiverse </a><br/>
+            <a href="correctCactus.3dm"> cactus ring holder in half rhino file </a>
             </p>
 
             <h2>Acknowledgements:</h2>
             <p>
             @m0nsieurX from Thingiverse for the stl file!
-            @Danli on Discord for the process chart!
+            @Danli for the process chart on Discord and for the consulting!
             @baileynd on Discord for the physical joining tips!
+            @Junchao for all the advice and help!
             </p>
             <p>
             <a href="https://sherrywang413.github.io/HCDE533/"> Return to Sherry's homepage </a>        
