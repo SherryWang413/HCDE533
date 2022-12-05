@@ -1,1 +1,132 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
 
+        <title>Sherry Wang's HCDE533 Page</title> 
+
+        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+
+    </head> 
+    <body> 
+
+        <div class="header">
+            <h1>Final Project: Foldable Tool Box</h1>
+            
+            <p>
+            By Sherry Wang
+            </p>
+            <p>
+            For the course's final project, I made a foldable tool box using Rhino modeling, Grasshopper parametric design, laser cutting, 3d printing, interference fits, and mechanism. I managed to follow the plan and timeline I previously set up in my proposal.
+            </p>
+            
+            <h2>Outcome:</h2>
+            <p>
+            This is what the tool box looks like eventually.
+            </p>
+            <p>
+            <img src="final.jpg" width=600></a> <br/>
+            </p>
+            <p>
+            I'm using it to hold my yarns, crochet hooks, and darning needles.
+            </p>
+            <p>
+            <img src="yarns.jpg" width=600></a> <br/>
+            </p>
+
+            <h2>Design:</h2>
+            <p>
+            I got inspired by this link from Thingiverse: <a href="https://www.thingiverse.com/thing:425353"> Foldable Tool Box</a>. I used its pictures only as a reference since some comments down below said that the dimensions were off and the handles were easily broken.
+            </p>
+            <p>
+            <img src="reference.png" width=600></a>
+            </p>
+            <p>
+            I started by designing the drawers once I measured the dimensions of the piece of plywood I had. Before going into Rhino, I did some calculations using the Pythagorean Theorem, since there were some constraints and I wanted the deliverable to be precise. Here's a Front-view sketch to better explain:
+            </p>
+            <p>
+            <img src="front_sketch.jpg" width=600></a>
+            </p>
+            <p>
+            I wanted the drawers to be press fit, which means that fingers need to be added. Luckily, I was able to refer to previous assignments. I did do a parametric design using Grasshopper. It might be an overkill for this final project, but I'd like to reuse this in the future for other projects, so it was a good bargain. Based on the sketch, I designed two types of drawer bottoms and two types of sides.
+            </p>
+            <p>
+            <img src="large_bottom.jpg" width=400><img src="small_bottom.jpg" width=400></a><br/>
+            <img src="large_side.jpg" width=400><img src="small_side.jpg" width=400></a>
+            </p>
+            <p>
+            Once all the components of the drawers were done, I assembled them in Rhino to confirm I got everything correct.
+            </p>
+            <p>
+            <img src="assembled.jpg" width=600></a>
+            </p>
+            <p>
+            After the drawers were finished, I went to design the connecting handles. In the project proposal, I mentioned that I would 3d print these handles, but was afraid of the pieces breaking when assembling. I was suggested by Nadya and Junchao to use reusable push-in rivets: they would not be as aesthetically pleasing, but definitely more durable. I went on to McMaster but the sizes of these rivets did not fit my plywood perfectly, so I decided to use this as a contingency plan. Meanwhile, I found a much more sturdy handle design on Thingiverse, where the connecting studs were cut in half, and a gap was created so that the handle was able to bend a little bit. I test printed this and it was working.
+            </p>
+            <p>
+            <img src="handle_detail.jpg" width=600></a>
+            </p>
+            <p>
+            I then scaled the connecting handle stock files so that the dimensions were right. I also made sure that the height of the studs was larger than the thickness of the plywood, so that it would go through. I then measured the diameters of the stud to get the diameter of the holes on the drawers.
+            </p>
+            <p>
+            Going back to the drawers, I extruded holes for the connecting handles while double checking if the holes were of the same distance and not too close to the edges.
+            </p>
+
+            <h2>Manufacture:</h2>
+            <p>
+            The Mill was closed for Thanksgiving, so I first used the 3d printer to get the connecting handles ready. They were of small sizes, so the total of 12 pieces took about a day to print.
+            </p>
+            <p>
+            <img src="handles.jpg" width=600></a>
+            </p>
+            <p>
+            As soon as the Mill reopened, I went to laser-cut the drawers. I encountered a really weird malfunction of the laser cutter but fixed it eventually by restarting the machine. I used the setting of speed 2, power 100, and frequency 10 for my plywood. The pieces were great except for the burning marks everywhere. Before dealing with them, I tried putting everything together to check once again the dimensions.
+            </p>
+            <p>
+            <img src="assembled1.jpg" width=600></a>
+            </p>
+            <p>
+            Although ugly, the pieces were all good, so I started removing the burn marks. I searched online and found some techniques. I tried using a brush and some soap, did not work. I tried rubbing alcohol, but was afraid of the plywood getting soaked. I tried a Magic Eraser: it was working a little bit but scraps fell everywhere. I tried sanding but was worried about the gaps being inaccurate afterwards. In the end, I went to Michaels and bought some black paint to cover everything up. I applied two coats on each surface and let them dry for a day.
+            </p>
+            <p>
+            <img src="paint.jpg" width=600></a>
+            </p>
+
+            <h2>Assembly:</h2>
+            <p>
+            Once the pieces were dry, I lightly sanded them smooth and assembled the drawers together. I applied glue in the gaps for better security and let them sit dry again for two more days.
+            </p>
+            <p>
+            <img src="glue.jpg" width=600></a>
+            </p>
+            <p>
+            I then added the connecting handles to the drawers and voila:
+            </p>
+            <p>
+            <img src="final.jpg" width=600></a>
+            </p>
+
+            <h2>Reflection:</h2>
+            <p>
+            Looking back, there were a few things I learned worth mentioning. First and foremost, I would use masking tapes on plywood before laser cutting it. The removal of burn marks was so painful. Second, I was so glad that I started early, or else I might not have time to paint or glue the drawers. Third, use single-color filament! Those different shades of green were driving me, a perfectionist, crazy.
+            </p>
+
+
+
+
+            <h2>Acknowledgements:</h2>
+            <p>
+            @3dfactorytlv from Thingiverse for the tool box idea!<br/>
+            @7ocb from Thingiverse for the adjusted connecting handles!<br/>
+            Mina and Annie for being the Mill laser cutting buddies!<br/>
+            Junchao and Nadya for advice and comments as always!
+            </p>
+            <p>
+            <a href="https://sherrywang413.github.io/HCDE533/"> Return to Sherry's homepage </a>        
+            </p>
+        </div>
+        
+    </body>
+</html>
